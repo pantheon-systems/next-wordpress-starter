@@ -6,6 +6,8 @@ require('dotenv').config({
 	path: path.resolve(process.cwd(), '.env.development.local'),
 });
 
+console.log('TESTING REGEX')
+
 if (
 	process.env.WPGRAPHQL_URL === undefined &&
 	process.env.PANTHEON_CMS_ENDPOINT === undefined
@@ -41,6 +43,13 @@ imageDomain = imageDomain.replace(/\/$/, '');
 const injectedOptions = {};
 if (process.env.PANTHEON_UPLOAD_PATH) {
 	injectedOptions['basePath'] = process.env.PANTHEON_UPLOAD_PATH;
+}
+
+if (process.env.PANTHEON_ENVIRONMENT_URL) {
+	const testRegex =
+		process.env.PANTHEON_ENVIRONMENT_URL.match(/^([^-]*-){1}[^-]*/);
+	console.log('TEST REGEX');
+	console.log(testRegex);
 }
 
 /** @type {import('next').NextConfig} */
