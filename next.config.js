@@ -46,10 +46,22 @@ if (process.env.PANTHEON_UPLOAD_PATH) {
 }
 
 if (process.env.PANTHEON_ENVIRONMENT_URL) {
-	const testRegex =
-		process.env.PANTHEON_ENVIRONMENT_URL.match(/^([^-]*-){1}[^-]*/);
-	console.log('TEST REGEX');
-	console.log(testRegex);
+	let PANTHEON_ENVIRONMENT_PREFIX = undefined
+	let IS_LIVE_ENVIRONMENT = undefined
+	const envPrefix =
+		process.env.PANTHEON_ENVIRONMENT_URL.match(/^([^-]*)/);
+	console.log(envPrefix)
+	console.log('PREFIX')
+	if (envPrefix === 'live') {
+		console.log('IS LIVE')
+		PANTHEON_ENVIRONMENT_PREFIX = 'live'
+		IS_LIVE_ENVIRONMENT = 'live'
+	} else {
+		console.log('ELSE CASE')
+		PANTHEON_ENVIRONMENT_PREFIX = process.env.PANTHEON_ENVIRONMENT_URL.match(/^([^-]*-)[^-]*/);
+	}
+	console.log('PANTHEON ENVIRONMENT')
+	console.log(PANTHEON_ENVIRONMENT_PREFIX)
 }
 
 /** @type {import('next').NextConfig} */
