@@ -49,7 +49,7 @@ if (process.env.PANTHEON_ENVIRONMENT_URL) {
 	let PANTHEON_ENVIRONMENT_PREFIX = undefined
 	let IS_LIVE_ENVIRONMENT = undefined
 	const envPrefix =
-		process.env.PANTHEON_ENVIRONMENT_URL.match(/^([^-]*)/);
+		process.env.PANTHEON_ENVIRONMENT_URL.match(/^([^-]*)/)[0];
 	console.log(envPrefix)
 	console.log('PREFIX')
 	if (envPrefix === 'live') {
