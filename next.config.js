@@ -49,6 +49,11 @@ if (process.env.PANTHEON_UPLOAD_PATH) {
 	injectedOptions['basePath'] = process.env.PANTHEON_UPLOAD_PATH;
 }
 
+console.log('CONFIG');
+console.log(process.env.PANTHEON_ENVIRONMENT);
+console.log(process.env.PANTHEON_ENVIRONMENT_URL);
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	...(injectedOptions && injectedOptions),
