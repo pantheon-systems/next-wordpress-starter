@@ -38,21 +38,10 @@ if (process.env.WPGRAPHQL_URL === undefined) {
 // remove trailing slash if it exists
 imageDomain = imageDomain.replace(/\/$/, '');
 
-if (process.env.PANTHEON_ENVIRONMENT_URL) {
-	if (process.env.PANTHEON_ENVIRONMENT_URL.startsWith('live')) {
-		process.env.IS_LIVE_ENVIRONMENT = true;
-	}
-}
-
 const injectedOptions = {};
 if (process.env.PANTHEON_UPLOAD_PATH) {
 	injectedOptions['basePath'] = process.env.PANTHEON_UPLOAD_PATH;
 }
-
-console.log('CONFIG');
-console.log(process.env.PANTHEON_ENVIRONMENT);
-console.log(process.env.PANTHEON_ENVIRONMENT_URL);
-
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
