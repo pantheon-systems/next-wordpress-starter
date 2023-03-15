@@ -23,8 +23,8 @@
 		"coverage": "vitest run --coverage"
 	},
 	"dependencies": {
-		"@pantheon-systems/nextjs-kit": "1.7.0",
-		"@pantheon-systems/wordpress-kit": "2.13.0",
+		"@pantheon-systems/nextjs-kit": "1.7.1",
+		"@pantheon-systems/wordpress-kit": "2.14.1",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
 		"next": "^13.1.1",
