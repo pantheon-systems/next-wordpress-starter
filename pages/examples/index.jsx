@@ -6,6 +6,7 @@ import PageHeader from '../../components/page-header';
 import Layout from '../../components/layout';
 
 import { getFooterMenu } from '../../lib/Menus';
+
 export default function ExamplesPageTemplate({ menuItems }) {
 	return (
 		<Layout footerMenu={menuItems}>
@@ -16,6 +17,9 @@ export default function ExamplesPageTemplate({ menuItems }) {
 			<PageHeader title="Examples" />
 			<section className="prose lg:prose-xl mt-10 flex flex-col mx-auto max-h-screen">
 				<div className="max-w-lg mx-auto lg:grid-cols-3 lg:max-w-screen-lg">
+					<Link passHref href="/">
+						<span className="w-full underline cursor-pointer">Home &rarr;</span>
+					</Link>
 					<p>
 						This page outlines a growing list of common use cases that can be
 						used as a reference when building using this starter kit. If you
