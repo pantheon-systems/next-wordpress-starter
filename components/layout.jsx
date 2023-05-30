@@ -1,4 +1,5 @@
-import { Header, Footer, PreviewRibbon } from '@pantheon-systems/nextjs-kit';
+import { Footer, Header, PreviewRibbon } from '@pantheon-systems/nextjs-kit';
+import styles from './layout.module.css';
 
 export default function Layout({ children, footerMenu, preview }) {
 	const navItems = [
@@ -27,12 +28,12 @@ export default function Layout({ children, footerMenu, preview }) {
 	}));
 
 	return (
-		<div className="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden">
+		<div className={`${styles.layout} flex flex-col`}>
 			{preview && <PreviewRibbon />}
 			<Header navItems={navItems} />
 			<main className="mb-auto">{children}</main>
 			<Footer footerMenuItems={footerMenuItems}>
-				<span className="mx-auto">
+				<span className={`${styles.footerCopy} my-0 mx-auto`}>
 					© {new Date().getFullYear()} Built with{' '}
 					<a
 						className="text-white hover:text-blue-100 underline"

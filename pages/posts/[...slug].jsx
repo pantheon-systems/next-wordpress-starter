@@ -4,8 +4,8 @@ import { setOutgoingHeaders } from '../../lib/setOutgoingHeaders';
 
 import Layout from '../../components/layout';
 import { getFooterMenu } from '../../lib/Menus';
-import { IMAGE_URL } from '../../lib/constants';
 import { getPostByUri, getPostPreview } from '../../lib/Posts';
+import styles from './[...slug].module.css';
 
 export default function PostTemplate({ menuItems, post, preview }) {
 	return (
@@ -26,7 +26,7 @@ export default function PostTemplate({ menuItems, post, preview }) {
 						  }
 						: undefined
 				}
-				contentClassName="ps-wp-content"
+				contentClassName={`${styles.content} text-gray-700 max-w-screen-lg`}
 			/>
 		</Layout>
 	);

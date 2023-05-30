@@ -15,6 +15,7 @@
 		"build:mono": "next build",
 		"start:mono": "next start",
 		"lint": "next lint",
+		"lint:fix": "next lint --fix && npm run prettier:fix",
 		"prettier": "prettier \"**/*.{js,jsx,md}\" --check --ignore-path .prettierignore",
 		"prettier:fix": "prettier \"**/*.{js,jsx,,md}\" --write --ignore-path .prettierignore",
 		"test": "vitest run",
@@ -23,8 +24,8 @@
 		"coverage": "vitest run --coverage"
 	},
 	"dependencies": {
-		"@pantheon-systems/nextjs-kit": "1.7.2",
-		"@pantheon-systems/wordpress-kit": "2.15.0",
+		"@pantheon-systems/nextjs-kit": "1.7.3",
+		"@pantheon-systems/wordpress-kit": "3.0.0",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
 		"next": "^13.1.1",
@@ -35,8 +36,8 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.12",
-		"postcss": "^8.4.16",
-		"tailwindcss": "^3.1.8",
+		"postcss": "^8.4.21",
+		"tailwindcss": "^3.3.2",
 		"@testing-library/react": "13.4.0",
 		"@vitejs/plugin-react": "^2.1.0",
 		"c8": "^7.12.0",

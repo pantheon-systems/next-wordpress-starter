@@ -1,12 +1,11 @@
 import { NextSeo } from 'next-seo';
 import { ContentWithImage } from '@pantheon-systems/nextjs-kit';
 import { setOutgoingHeaders } from '../../lib/setOutgoingHeaders';
-import { IMAGE_URL } from '../../lib/constants';
-
 import Layout from '../../components/layout';
 
 import { getFooterMenu } from '../../lib/Menus';
 import { getPageByUri, getPagePreview } from '../../lib/Pages';
+import styles from './page.module.css';
 
 export default function PageTemplate({ menuItems, page, preview }) {
 	return (
@@ -24,10 +23,10 @@ export default function PageTemplate({ menuItems, page, preview }) {
 						? {
 								src: page.featuredImage?.node.sourceUrl,
 								alt: page.featuredImage?.node.altText,
-							}
+						  }
 						: undefined
-					}
-					contentClassName="ps-wp-content"
+				}
+				contentClassName={`${styles.content} text-gray-700 max-w-screen-md`}
 			/>
 		</Layout>
 	);
