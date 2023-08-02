@@ -12,7 +12,7 @@ export default function Home({ menuItems, posts }) {
 		<div className={`${styles.header} font-extrabold text-center w-fit`}>
 			<h1>
 				Welcome to{' '}
-				<a className={`${styles.next} text-blue-500`} href="https://nextjs.org">
+				<a className="text-blue-500" href="https://nextjs.org">
 					Next.js!
 				</a>
 			</h1>

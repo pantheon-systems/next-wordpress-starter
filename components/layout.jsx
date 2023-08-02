@@ -33,7 +33,7 @@ export default function Layout({ children, footerMenu, preview }) {
 			<Header navItems={navItems} />
 			<main className="mb-auto">{children}</main>
 			<Footer footerMenuItems={footerMenuItems}>
-				<span className={`${styles.footerCopy} my-0 mx-auto`}>
+				<span className="my-0 mx-auto">
 					© {new Date().getFullYear()} Built with{' '}
 					<a
 						className="text-white hover:text-blue-100 underline"
