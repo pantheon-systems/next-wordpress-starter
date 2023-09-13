@@ -8,6 +8,9 @@
 	"bugs": "",
 	"repository": "",
 	"author": "",
+	"engines": {
+		"node": "18"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "npm run decoupled-kit-health-check && next build && cp -r .next/static .next/standalone/.next && cp -r public .next/standalone",
@@ -16,8 +19,8 @@
 		"start:mono": "next start",
 		"lint": "next lint",
 		"lint:fix": "next lint --fix && npm run prettier:fix",
-		"prettier": "prettier \"**/*.{js,jsx,md}\" --check --ignore-path .prettierignore",
-		"prettier:fix": "prettier \"**/*.{js,jsx,,md}\" --write --ignore-path .prettierignore",
+		"prettier": "prettier '**/*.{js,jsx,md}' --check --ignore-path .prettierignore",
+		"prettier:fix": "prettier '**/*.{js,jsx,,md}' --write --ignore-path .prettierignore",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"update-snapshots": "vitest run --update --silent",
@@ -30,25 +33,26 @@
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
 		"next": "13.4.7",
-		"next-seo": "^5.4.0",
+		"next-seo": "^5.15.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"sharp": "^0.31.1"
+		"sharp": "^0.31.3"
 	},
 	"devDependencies": {
-		"@pantheon-systems/decoupled-kit-health-check": "0.1.1",
+		"@pantheon-systems/decoupled-kit-health-check": "0.1.2",
 		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.21",
 		"tailwindcss": "^3.3.2",
 		"@testing-library/react": "13.4.0",
-		"@vitejs/plugin-react": "^2.1.0",
+		"@vitejs/plugin-react": "^3.0.1",
 		"c8": "^7.12.0",
 		"eslint": "^8.24.0",
 		"eslint-config-next": "13.4.7",
-		"msw": "^0.47.3",
+		"jsdom": "^22.1.0",
+		"msw": "^1.0.0",
 		"prettier": "^2.7.1",
 		"typescript": "4.8.4",
-		"vite": "^3.1.4",
-		"vitest": "^0.23.4"
+		"vite": "^4.0.4",
+		"vitest": "^0.28.3"
 	}
 }
