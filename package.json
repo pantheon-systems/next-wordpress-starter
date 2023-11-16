@@ -28,11 +28,11 @@
 		"decoupled-kit-health-check": "npx --prefer-offline @pantheon-systems/decoupled-kit-health-check wordpress"
 	},
 	"dependencies": {
-		"@pantheon-systems/nextjs-kit": "1.7.6",
+		"@pantheon-systems/nextjs-kit": "1.7.7",
 		"@pantheon-systems/wordpress-kit": "3.1.2",
 		"@tailwindcss/typography": "^0.5.7",
 		"dotenv": "^16.0.2",
-		"next": "13.4.7",
+		"next": "13.5.6",
 		"next-seo": "^6.1.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
